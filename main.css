@@ -5,21 +5,61 @@ body {
     background-color: #f0f0f0;
 }
 .Principal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    display:grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 40% 10% 60% 60%;
+    background-color: rgb(23, 32, 32);
+    grid-template-areas: "Enca Enca"
+                         "Nave Nave"
+                         "Enca2 Enca2"
+                         "Mapa Resul"
+                         "Nose Resul";
 }
-.Barra-Busqueda {
-    display: flex;
-    gap: 10px;
+
+#G1{
+    grid-area: Enca;
     background-color: #4a7023;
+}
+#G2{
+    grid-area:Nave;
+    background-color: #23706f;
+}
+#G3{
+    grid-area:Enca2;
+    background-color: #6c2370;
+}
+#G4{
+    grid-area:Mapa;
+    background-color: #702324;
+}
+#G5{
+    grid-area:Resul;
+    background-color: #233a70;
+}
+#G6{
+    grid-area:Nose;
+    background-color: #b0dc4b;
+}
+
+.Barra-Busqueda {
+    background-color: #236770;
     padding: 15px;
+    margin:50px;
     border-radius: 10px;
     color: white;
-    width: 90%;
-    justify-content: space-between;
+    
 }
+
+#Logo{
+    width: 30%;
+    height: 50%;
+    display: block;
+    margin: auto;
+    
+}
+
 .Filtros {
     display: flex;
     gap: 10px;
@@ -50,15 +90,15 @@ body {
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: 2s;
 }
 
 .HotelInfo:hover{
     width: 100%;
     height: 50%;
-    font-weight:bold
 }
 
 #map {
     height: 500px; /* Ajusta la altura según sea necesario */
-    width: 100%;
+    width: calc(100%);
 }

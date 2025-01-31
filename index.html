@@ -9,43 +9,69 @@
   
 </head>
 <body>
-    <div class="Principal">
-        <div class="Barra-Busqueda">
-            <label><strong>Ubicación:</strong> <select><option>Nueva Laredo, Tamps.</option></select></label>
-            <label><strong>Fecha:</strong> <input type="date"> - <input type="date"></label>
-            <label><strong>Precio:</strong> <select><option>$0 - $1000</option></select></label>
-            <button>🔍 Buscar</button>
-        </div>
-        <div class="Filtros">
-            <label><strong>Precio:</strong> <select><option>$0 - $1000</option></select></label>
-            <label><strong>Servicios:</strong> <select><option>WiFi</option></select></label>
-            <label><strong>Puntuación:</strong> <select><option>★★★★★</option></select></label>
-        </div>
-        <div class="Hoteles">
-            < <div id="map"></div>
 
-            <!-- Incluir JavaScript de Leaflet -->
-            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-            <script>
-                // Crear un mapa centrado en una latitud y longitud específica
-                var map = L.map('map').setView([19.4326, -99.1332], 23); // Aquí usé las coordenadas de Ciudad de México (puedes cambiarlas)
-        
-                // Cargar el mapa de OpenStreetMap
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }).addTo(map);
-        
+    <div class="Principal">
+        <div id="G1">
+
+        </div>
+        <div id="G2">
+            <img id="Logo" src="https://i0.wp.com/consultorasenmexico.com/wp-content/uploads/2023/10/Logo_de_Rotoplas.svg_-1.png?resize=1024%2C354&ssl=1">
+            <div class="Barra-Busqueda">
+                <label><strong>Ubicación:</strong> <select><option>Nueva Laredo, Tamps.</option></select></label>
+                <label><strong>Fecha:</strong> <input type="date"> - <input type="date"></label>
+                <label><strong>Precio:</strong> <select><option>$0 - $1000</option></select></label>
+                <button>🔍 Buscar</button>
+            </div>
+        </div>
+        <div id="G3">
+            <div class="Filtros">
+                <label><strong>Precio:</strong> <select><option>$0 - $1000</option></select></label>
+                <label><strong>Servicios:</strong> <select><option>WiFi</option></select></label>
+                <label><strong>Puntuación:</strong> <select><option>★★★★★</option></select></label>
+            </div>
+        </div>
+        <div id="G4">
+            <div class="Hoteles">
+                < <div id="map"></div>
     
-                L.marker([19.4326, -99.1332]).addTo(map)
-                    .bindPopup("Chiapias")
-                    .openPopup();
-            </script>
+                <!-- Incluir JavaScript de Leaflet -->
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                <script>
+                    // Crear un mapa centrado en una latitud y longitud específica
+                    var map = L.map('map').setView([19.4326, -99.1332], 23); // Aquí usé las coordenadas de Ciudad de México (puedes cambiarlas)
+            
+                    // Cargar el mapa de OpenStreetMap
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+            
+        
+                    L.marker([19.4326, -99.1332]).addTo(map)
+                        .bindPopup("Chiapias")
+                        .openPopup();
+                </script>
+                
+            </div>
+        </div>
+        <div id="G5">
             <div class="resultados">
                 <div class="HotelInfo">Hotel 11</div>
                 <div class="HotelInfo">Hotel 2</div>
                 <div class="HotelInfo">Hotel 3</div>
             </div>
         </div>
+        <div id="G6">
+
+        </div>
+
+        
+
+
+
+
+        
+        
+        
     </div>
 </body>
 </html>
