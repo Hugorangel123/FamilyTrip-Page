@@ -6,6 +6,14 @@
     <title>FamilyTrip</title>
     <link rel="stylesheet" href="main.css".css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Letra de texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
   
 </head>
 <body>
@@ -15,11 +23,35 @@
 
         </div>
         <div id="G2">
+            
             <img id="Logo" src="https://i0.wp.com/consultorasenmexico.com/wp-content/uploads/2023/10/Logo_de_Rotoplas.svg_-1.png?resize=1024%2C354&ssl=1">
+
+          
+
+
             <div class="Barra-Busqueda">
-                <label><strong>Ubicación:</strong> <select><option>Nueva Laredo, Tamps.</option></select></label>
-                <label><strong>Fecha:</strong> <input type="date"> - <input type="date"></label>
-                <label><strong>Precio:</strong> <select><option>$0 - $1000</option></select></label>
+                <form>
+                    <input type="checkbox" id="options-checkbox-btn">
+                    <div id="select-btn">
+                        <i class="fa-solid fa-plane"></i><div id="selected-value">Ubicación</div>
+                        <div id="chevrons">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+
+                        
+                    </div>
+                    <div id="options">
+                        <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
+                        <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
+                        <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
+                       
+                    </div>
+                </form>
+
+
+
+                <label><strong class = Hotel>Fecha:</strong> <input type="date"> - <input type="date"></label>
+                <label><strong class = Hotel>Precio:</strong> <select><option>$0 - $1000</option></select></label>
                 <button>🔍 Buscar</button>
             </div>
         </div>
