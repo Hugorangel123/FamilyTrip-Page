@@ -9,7 +9,7 @@ body {
     display:grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 10% 40% 10% 60% 60%;
     background-color: rgb(23, 32, 32);
     grid-template-areas: "Enca Enca"
@@ -228,17 +228,19 @@ form {
 }
 
 #map {
-    height: 500px; /* Ajusta la altura según sea necesario */
+    height: 500px; 
     width: calc(100%);
 }
 
+/*Esto de aca eh mio*/
+
 #H1{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 filas de igual tamaño */
-    height: 25vh;
-    width: 75vh;
+    grid-template-columns: 2fr 3fr 3fr; 
+    height: 30vh;
+    width: 98vh;
     background-color: #233a70;
-
+    padding: 10px;
 }
 
 .H11{
@@ -246,17 +248,121 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e8b87c;
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/2c/1f/e6/e9/fiesta-inn-nuevo-laredo.jpg);
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+
     border-top-left-radius:20px;
     border-bottom-left-radius:20px
 }
 
+
+
+
+#Precio{
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr; 
+    align-items: center;
+    height: calc(90%);
+    width: calc(90%);
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #7cd8e8;
+}
+
+#NomHotel{
+    font-style: italic;
+    font-weight: bold;
+    color: #2d4b2c;
+    font-size: 20px;
+    height: 10px;
+    padding: 5px;
+}
+
+.estrellas {
+    color: #2d4b2c;
+    font-size: 18px;
+    height: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 10px;
+}
+
+.servicios {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    height: 10px;
+    
+}
+
+.iconos {
+    display: flex;
+    margin-top: 15px;
+    font-size: 24px;
+    color: #2d4b2c;
+    height: 10px;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.iconos i {
+    padding: 10px; 
+}
+
 .H12{
     border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 1fr; 
+    
     background-color: #e8b87c;
+
+}
+
+.precio {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+    
+}
+
+/* Fila 2: Precio mensual */
+.mensualidad {
+    font-size: 16px;
+    font-style: italic;
+    text-align: right;
+    color: #2d4b2c;
+    height: 10px;
+
+}
+
+/* Fila 3: Beneficios */
+.beneficios ul {
+    padding: 10px;
+    margin-top: 10px;
+    height: 10px;
+
+}
+
+.beneficios li {
+    margin-bottom: 5px;
+    height: 10px;
+}
+
+/* Fila 4: Descuento */
+.descuento {
+    background-color: #d30068;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 5px;
+    height: 10px;
 
 }
 
