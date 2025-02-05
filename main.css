@@ -102,3 +102,41 @@ body {
     height: 500px; /* Ajusta la altura según sea necesario */
     width: calc(100%);
 }
+
+#H1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 filas de igual tamaño */
+    height: 25vh;
+    width: 75vh;
+    background-color: #233a70;
+
+}
+
+.H11{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8b87c;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px
+}
+
+.H12{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8b87c;
+
+}
+
+.H13{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8b87c;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
