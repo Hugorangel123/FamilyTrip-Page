@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FamilyTrip</title>
-    <link rel="stylesheet" href="main.css".css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -14,7 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
 </head>
 <body>
 
@@ -47,6 +49,19 @@
                         <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
                        
                     </div>
+                </form>
+
+                <form action="">
+
+                    <label for="daterange" style="color: white;">ll</label>
+                    <input type="text" id="daterange">
+                    <div id="select-btn-Fecha">
+                    <i class="fa-solid fa-calendar-check"></i><div id="selected-value-Fecha">Fecha</div>
+                    <div id="chevrons">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    </div>
+
                 </form>
 
 
@@ -166,5 +181,33 @@
         
     </div>
     <script src="main.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+    const dateInput = document.getElementById("daterange");
+
+    // Inicializar Flatpickr
+    const fp = flatpickr(dateInput, {
+        mode: "range",
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        locale: "es",
+        onChange: function(selectedDates, dateStr) {
+            document.getElementById("selected-value-Fecha").textContent = dateStr || "Fecha";
+        }
+    });
+
+    // Evento para abrir el calendario
+    document.getElementById("select-btn").addEventListener("click", function() {
+        fp.open();
+    });
+
+});
+
+
+    </script>
 </body>
 </html>
