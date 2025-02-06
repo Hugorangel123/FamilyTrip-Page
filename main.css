@@ -84,7 +84,7 @@ body {
     color: #2c2c2c;
     display: flex;
     align-items: center;  
-    height: 45px;
+    height: 55px;
     width: 100%; 
     max-width: 1200px; 
 }
@@ -131,6 +131,20 @@ form {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     animation: fadeOut 0.5s forwards;
 }
+
+#options-checkbox-btn:checked ~ #select-btn,
+#select-btn:active {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    animation: fadeOut 0.5s forwards;
+}
+
+#options1-checkbox-btn:checked ~ #select-btn,
+#select-btn:active {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    animation: fadeOut 0.5s forwards;
+}
 #chevrons {
     margin-left: auto; /* Para que la flecha se mantenga a la derecha */
 }
@@ -154,9 +168,25 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+#options1{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    margin-top: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 #options-checkbox-btn:checked ~ #options {
     display: block;
 }
+
+#options-checkbox-btn:checked ~ #options1{
+    display: block;
+}
+
 
 .option {
     display: flex;
@@ -425,3 +455,31 @@ form {
     border-top-right-radius:20px;
     border-bottom-right-radius:20px;
 }
+
+.button {
+    background-color: #0078D4; /* Azul */
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer;
+    font-size: 16px;
+    ;
+}
+
+.button:hover {
+    background-color: #005ea2; /* Azul más oscuro al pasar el mouse */
+}
+
+#map {
+    top: 60vh;
+  left: 0px;
+  width: 50vw;
+  height: 61vh;
+  position: absolute;
+ 
+   
+}
+

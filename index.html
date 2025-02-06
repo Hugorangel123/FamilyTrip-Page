@@ -15,10 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css">
 
 </head>
-<body>
+<body onload="initMap()">
 
     <div class="Principal">
         <div id="G1">
@@ -45,11 +46,30 @@
                     </div>
                     <div id="options">
                         <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
-                        <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
-                        <div class="option"><i class="fa-solid fa-location-dot"></i>Nueva Laredo, Tamps.</div>
+                        <div class="option"><i class="fa-solid fa-location-dot"></i>Anahuac, Nuevo Leon.</div>
+                        <div class="option"><i class="fa-solid fa-location-dot"></i>🐧🐧🐧, Tamps.</div>
                        
                     </div>
                 </form>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const optionsCheckboxBtn = document.getElementById("options-checkbox-btn");
+                        const options = document.getElementById("options");
+
+                        optionsCheckboxBtn.addEventListener("change", function() {
+                            options.classList.toggle("active");
+                        });
+
+                        options.addEventListener("click", function(e) {
+                            if (e.target.classList.contains("option")) {
+                                const value = e.target.textContent;
+                                document.getElementById("selected-value").textContent = value;
+                                options.classList.remove("active");
+                            }
+                        });
+                    });
+                </script>
 
                 <form id="2">
 
@@ -64,11 +84,54 @@
 
                 </form>
 
+                
 
+                <form >
+                    <label for="options-checkbox-btn" style="color: white;">ll</label>
+                    <input type="checkbox" id="options-checkbox-btn">
+                    <div id="select-btn">
+                        <i class="fa-solid fa-money-bill-wave"></i><div id="selected-valuePrecio">PRECIO</div>
+                        <div id="chevrons">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
 
-                <button>🔍 Buscar</button>
+                        
+                    </div>
+                    <div id="options1">
+                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i>$0-$1000</div>
+                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i>$1001-$5000</div>
+                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i>$5000-$10,000</div>
+                       
+                    </div>
+                </form>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const optionsCheckboxBtn = document.getElementById("options-checkbox-btn");
+                    const options = document.getElementById("options1");
+
+                    optionsCheckboxBtn.addEventListener("change", function() {
+                        options.classList.toggle("active");
+                    });
+
+                    options.addEventListener("click", function(e) {
+                        if (e.target.classList.contains("option")) {
+                            const value = e.target.textContent;
+                            document.getElementById("selected-valuePrecio").textContent = value;
+                            options.classList.remove("active");
+                        }
+                    });
+                });
+            </script>
+
+                <button class="button">Buscar</button>
             </div>
         </div>
+
+
+        <script>
+
+            
+        </script>
         <div id="G3">
             <div class="Filtros">
                 <label><strong>Precio:</strong> <select><option>$0 - $1000</option></select></label>
@@ -78,24 +141,84 @@
         </div>
         <div id="G4">
             <div class="Hoteles">
-                < <div id="map"></div>
+                 <div id="map"></div>
     
-                <!-- Incluir JavaScript de Leaflet -->
-                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-                <script>
-                    // Crear un mapa centrado en una latitud y longitud específica
-                    var map = L.map('map').setView([19.4326, -99.1332], 23); // Aquí usé las coordenadas de Ciudad de México (puedes cambiarlas)
-            
-                    // Cargar el mapa de OpenStreetMap
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }).addTo(map);
-            
-        
-                    L.marker([19.4326, -99.1332]).addTo(map)
-                        .bindPopup("Chiapias")
-                        .openPopup();
-                </script>
+                 <script>
+                    
+                    // Variable global para el mapa y el marcador
+  var map;
+  var marker;
+  // Crear un marcador en una ubicación específica
+  var marcador = new atlas.HtmlMarker({
+      position: [-99.5164, 27.4761], // [longitud, latitud]
+      text: "📍",
+      popup: new atlas.Popup({
+          content: "<b>Hotel Fiesta Inn</b><br>Gimnasio y piscina cubiertos",
+          pixelOffset: [0, -30]
+      })
+  });
+  
+  // Agregar el marcador al mapa
+  map.markers.add(marcador);
+  
+  
+  // Inicializar el mapa de Azure Maps
+  function initMap() {
+      map = new atlas.Map("map", {
+          center: [-99.5164, 27.4761], // [longitud, latitud]
+          zoom: 13,
+          style: "road",
+          authOptions: {
+              authType: "subscriptionKey",
+              subscriptionKey: "5PRbgnWBxNoaMT21iMYoi9aH46hpZjoUCgJhmMbjyKYroIdQGrJTJQQJ99BBACYeBjFJ6C2zAAAgAZMP2eUi" // 🔹 Reemplázala con tu clave real
+          }
+      });
+  
+      // Crear el marcador una vez que el mapa esté listo
+      map.events.add("ready", function () {
+          marker = new atlas.HtmlMarker({
+              position: [-99.5164, 27.4761], // [longitud, latitud] inicial
+              text: "📍",
+              popup: new atlas.Popup({
+                  content: "<b>Ubicación Inicial</b>",
+                  pixelOffset: [0, -30]
+              })
+          });
+  
+          map.markers.add(marker);
+      });
+  
+      // Agregar eventos a cada hotel
+      document.querySelectorAll(".H11").forEach(hotel => {
+          hotel.addEventListener("click", function () {
+              var lat = parseFloat(this.getAttribute("data-lat"));
+              var lon = parseFloat(this.getAttribute("data-lon"));
+              var name = this.getAttribute("data-name");
+  
+              if (!isNaN(lat) && !isNaN(lon)) {
+                  // Mover el mapa a la nueva ubicación con más zoom (nivel 18)
+                  map.setCamera({
+                      center: [lon, lat], // Azure Maps usa [longitud, latitud]
+                      zoom: 18
+                  });
+  
+                  // Mover el marcador y actualizar el popup
+                  marker.setOptions({
+                      position: [lon, lat],
+                      popup: new atlas.Popup({
+                          content: `<b>${name}</b>`,
+                          pixelOffset: [0, -30]
+                      })
+                  });
+              }
+          });
+      });
+  }
+  
+  
+                  </script>
+                  
+  
                 
             </div>
         </div>
