@@ -23,18 +23,18 @@
 
     <div class="Principal">
         <div id="G1">
-
+            <div class="Cajas" id="Caja7"> <marquee behavior="scroll" direction="right"> <P style="color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">ESTAMOS EN PRODUCCION</P><img style="width: 5vw;"  src="https://www.txori.com/forum/img/20220/1617060687_dekulink_moveset_final_deluxe_1.gif" alt="" class="linkdeku"></marquee></div>
         </div>
         <div id="G2">
             
-            <img id="Logo" src="https://i0.wp.com/consultorasenmexico.com/wp-content/uploads/2023/10/Logo_de_Rotoplas.svg_-1.png?resize=1024%2C354&ssl=1">
+            <img id="Logo" src="https://i0.wp.com/consultorasenmexico.com/wp-content/uploads/2023/10/Logo_de_Rotoplas.svg_-1.png?resize=1024%2C354&ssl=1" alt="LOGO">
 
           
 
 
             <div class="Barra-Busqueda">
-                <form >
-                    <label for="options-checkbox-btn" style="color: white;">ll</label>
+                <form style="width: 80%;">
+                    <label for="options-checkbox-btn" style="color: white;"></label>
                     <input type="checkbox" id="options-checkbox-btn">
                     <div id="select-btn">
                         <i class="fa-solid fa-plane"></i><div id="selected-value">Ubicación</div>
@@ -54,22 +54,29 @@
 
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
-                        const optionsCheckboxBtn = document.getElementById("options-checkbox-btn");
-                        const options = document.getElementById("options");
+                     const optionsCheckboxBtn = document.getElementById("options-checkbox-btn");
+                     const options = document.getElementById("options");
+                     const selectedValue = document.getElementById("selected-value");
 
-                        optionsCheckboxBtn.addEventListener("change", function() {
-                            options.classList.toggle("active");
-                        });
-
-                        options.addEventListener("click", function(e) {
-                            if (e.target.classList.contains("option")) {
-                                const value = e.target.textContent;
-                                document.getElementById("selected-value").textContent = value;
-                                options.classList.remove("active");
-                            }
-                        });
+        // Mostrar/Ocultar opciones cuando el checkbox cambia
+                    optionsCheckboxBtn.addEventListener("change", function() {
+                    options.classList.toggle("active", optionsCheckboxBtn.checked);
                     });
+
+        // Manejar selección de opción
+                options.addEventListener("click", function(e) {
+                if (e.target.classList.contains("option")) {
+                selectedValue.textContent = e.target.textContent;
+
+                // Ocultar opciones
+                options.classList.remove("active");
+                optionsCheckboxBtn.checked = false; // Desmarcar checkbox para ocultar el menú
+            }
+        });
+    });
                 </script>
+        <div style="width: 100%; height: 9vh;">
+
 
                 <form id="2">
 
@@ -83,48 +90,53 @@
                     </div>
 
                 </form>
-
+            </div>
                 
-
-                <form >
-                    <label for="options-checkbox-btn" style="color: white;">ll</label>
-                    <input type="checkbox" id="options-checkbox-btn">
+                <form style= "width: 50vw; left: 1vw; height: 8vh;">
+                    <label for="options-checkbox-btnPrecio" style="color: white;">_</label>
+                    <input type="checkbox" id="options-checkbox-btnPrecio">
                     <div id="select-btn">
-                        <i class="fa-solid fa-money-bill-wave"></i><div id="selected-valuePrecio">PRECIO</div>
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <div id="selected-valuePrecio">Precio</div>
                         <div id="chevrons">
                             <i class="fas fa-chevron-down"></i>
                         </div>
-
-                        
                     </div>
                     <div id="options1">
-                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i>$0-$1000</div>
-                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i>$1001-$5000</div>
-                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i>$5000-$10,000</div>
-                       
+                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i> $0-$1000</div>
+                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i> $1001-$5000</div>
+                        <div class="option"><i class="fa-solid fa-money-bill-wave"></i> $5000-$10,000</div>
                     </div>
                 </form>
-            <script>
+                
+                <script>
                 document.addEventListener("DOMContentLoaded", function() {
-                    const optionsCheckboxBtn = document.getElementById("options-checkbox-btn");
+                    const optionsCheckboxBtn = document.getElementById("options-checkbox-btnPrecio");
                     const options = document.getElementById("options1");
-
+                    const selectedValuePrecio = document.getElementById("selected-valuePrecio");
+                
+                    // Mostrar/Ocultar opciones cuando el checkbox cambia
                     optionsCheckboxBtn.addEventListener("change", function() {
-                        options.classList.toggle("active");
+                        options.classList.toggle("active", optionsCheckboxBtn.checked);
                     });
-
+                
+                    // Manejar selección de opción
                     options.addEventListener("click", function(e) {
-                        if (e.target.classList.contains("option")) {
-                            const value = e.target.textContent;
-                            document.getElementById("selected-valuePrecio").textContent = value;
+                        const selectedOption = e.target.closest(".option"); // Asegurar que se selecciona una opción
+                        if (selectedOption) {
+                            selectedValuePrecio.textContent = selectedOption.textContent.trim();
+                
+                            // Ocultar opciones y desmarcar checkbox
                             options.classList.remove("active");
+                            optionsCheckboxBtn.checked = false;
                         }
                     });
                 });
-            </script>
+                </script>
 
-                <button class="button">Buscar</button>
+<button class="button" onclick="location.reload()">Buscar</button>
             </div>
+            
         </div>
 
 
