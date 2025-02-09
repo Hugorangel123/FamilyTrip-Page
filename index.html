@@ -275,9 +275,7 @@
         </div>
         <div id="G5">
             <div class="resultados">
-                <div class="bt" id="b1">Servicios</div>
-                <div class="bt" id="b2">Opiniones</div>
-                <div class="bt" id="b3">Precios</div>
+                
                 <div class="HotelInfo" id="H1">
                     <div class="H11" data-lat="20.5649" data-lon="-87.1201" data-name="HOTAL 1"></div>
                     <div class="H12">
@@ -297,7 +295,9 @@
                 
                         <div class="iconos">
                             <i class="far fa-heart"></i>
-                            <i class="far fa-comment-dots"></i>
+                            <div id="ComentaAqui">
+                                <i class="far fa-comment-dots"></i>
+                            </div>
                             <i class="fas fa-share-alt"></i>
                         </div>
 
@@ -426,104 +426,63 @@
                         ✖
                     </button>
                     <div id="Precios">
-                        <div id="Cobro">
-                            <h2>Reserva de Habitación</h2>
+                        <div id="DatosC">
+                            <h2>Información del huésped</h2>
 
-                            <!-- Nombre y Apellidos -->
-                            <div class="form-group">
-                                <label for="hotel-nombre">Nombre completo:</label>
-                                <input type="text" id="hotel-nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
-                            </div>
-
-                            <!-- Correo electrónico -->
-                            <div class="form-group">
-                                <label for="hotel-correo">Correo electrónico:</label>
-                                <input type="email" id="hotel-correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
-                            </div>
-
-                            <!-- Número de teléfono -->
-                            <div class="form-group">
-                                <label for="hotel-telefono">Número de teléfono:</label>
-                                <input type="tel" id="hotel-telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
-                            </div>
-
-                            <!-- Número de personas -->
-                            <div class="form-group">
-                                <label for="hotel-personas">Número de personas:</label>
-                                <select id="hotel-personas" name="personas" required>
-                                    <option value="1">1 persona</option>
-                                    <option value="2">2 personas</option>
-                                    <option value="3">3 personas</option>
-                                    <option value="4">4 personas</option>
-                                    <option value="5">5 personas</option>
-                                </select>
-                            </div>
-
-                            <!-- Tipo de habitación -->
-                            <div class="form-group">
-                                <label for="hotel-habitacion">Tipo de habitación:</label>
-                                <select id="hotel-habitacion" name="habitacion" required>
-                                    <option value="individual">Individual</option>
-                                    <option value="doble">Doble</option>
-                                    <option value="suite">Suite</option>
-                                    <option value="familiar">Familiar</option>
-                                </select>
-                            </div>
-
-                            <!-- Precios -->
-                            <div class="form-group">
-                                <label for="hotel-precio">Precio por noche:</label>
-                                <input type="number" id="hotel-precio" name="precio" placeholder="Ingresa el precio por noche" required>
-                            </div>
-
-                            <!-- Preferencias adicionales -->
-                            <div class="form-group">
-                                <label for="hotel-preferencias">Preferencias adicionales:</label>
-                                <textarea id="hotel-preferencias" name="preferencias" placeholder="¿Algún requerimiento especial?" rows="4"></textarea>
-                            </div>
-
-                            <!-- Método de pago -->
-                            <div class="form-group">
-                                <label for="hotel-pago">Método de pago:</label>
-                                <select id="hotel-pago" name="pago" required>
-                                    <option value="tarjeta">Tarjeta de crédito/débito</option>
-                                    <option value="paypal">PayPal</option>
-                                    <option value="efectivo">Efectivo</option>
-                                </select>
-                            </div>
-
-                            <!-- Aceptación de términos -->
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox" id="hotel-terminos" name="terminos" required>
-                                    Acepto los términos y condiciones.
-                                </label>
-                            </div>
-
-                            <!-- Botón de envío -->
-                            <div class="form-group">
-                                <button type="submit" id="hotel-submit" class="hotel-button">Confirmar Reserva</button>
-                            </div>
-                        </div>
-
-                        <div id="CobroInfo">
-                            <div id="CostoT">
-                                $2000
-                            </div>
-                            <div id="Pagos">
-                                <p>Cuarto ........... %2000</p>
-                                <p>IVA ........... $200</p>
-                                <p>Tarifa del resort ........... $6000</p>
-                            </div>
-                            <div id="total">
-                                Total $5000
-                            </div>
-                            <div id="ImagenH">
-                                
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" required>
+                        
+                            <label for="apellido">Apellido *</label>
+                            <input type="text" id="apellido" required>
+                        
+                            <label for="email">Dirección de correo electrónico *</label>
+                            <input type="email" id="email" required>
+                        
+                            <label for="pais">País *</label>
+                            <select id="pais">
+                                <option>México</option>
+                                <option>Estados Unidos</option>
+                                <option>Canadá</option>
+                            </select>
+                            <label for="telefono">Número de teléfono *</label>
+                            <input type="tel" id="telefono" required>
+                            
+                            <div id="EstYCP">
+                                <div>
+                                    <label for="estado">Estado/Provincia *</label>
+                                    <input type="text" id="estado" required>
+                                </div>
+                                <div>
+                                    <label for="codigo_postal">Código postal *</label>
+                                    <input type="text" id="codigo_postal" required>
+                                </div>
+                        
                             </div>
                             
+                        
+                            <label for="registro">Número de registro del Reservations Club</label>
+                            <input type="text" id="registro">
                         </div>
+                        <div id="Pago">
+                            <div id="ImagenH"></div>
+                            <div id="Efectivo">
+                                <h2>Pago</h2>
+                        
+                                <label for="tarjeta">Número de tarjeta *</label>
+                                <input type="text" id="tarjeta" required>
+                        
+                                <label for="fecha">Fecha de caducidad *</label>
+                                <input type="text" id="tarjeta" required>
+                                <div id="Btn">
+                                    <button class="boton" id="tarjeta">Pagar</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                            
                     </div>
+                    
                     
                 </div>
                 <div class="HotelInfo" id="H1">
@@ -553,23 +512,20 @@
 
         function cerrarMenu(menuId) {
             document.getElementById(menuId).style.display = "none";
-            document.querySelectorAll(".HotelInfo").style.borderBottomLeftRadius = "0"; 
-        document.querySelectorAll(".HotelInfo").style.borderBottomRightRadius = "0"; 
+            
         }
 
-        document.getElementById("b1").addEventListener("click", function() {
+        document.querySelector(".servicios").addEventListener("click", function() {
             mostrarMenu("MenuH11");
         });
-        document.getElementById("b2").addEventListener("click", function() {
+        document.getElementById("ComentaAqui").addEventListener("click", function() {
             mostrarMenu("MenuH12");
         });
-        document.getElementById("b3").addEventListener("click", function() {
+        document.getElementById("Precio").addEventListener("click", function() {
             mostrarMenu("MenuH13");
         });
 
         
-
-
         
         </script>
         

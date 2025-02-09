@@ -56,9 +56,10 @@ body {
     font-size: 14px;
     position: relative;
     width: 97vw;;
-    z-index: 1000; * Azul Marino */
+    z-index: 1000; 
     
 }
+
 #G2 {
     grid-area: Nave;
     background-color: #F4F4F4; /* Gris Claro */
@@ -78,7 +79,7 @@ body {
 }
 #G5 {
     grid-area: Resul;
-    background-color: #F4F4F4; /* Azul Acero */
+    background-color: #c5e6ec; /* Azul Acero */
 }
 #G6 {
     grid-area: Nose;
@@ -470,21 +471,22 @@ select {
 }
 
 
+
+
+
 /*Esto de aca eh mio*/
 
 #H1{
     display: grid;
+    background-color: #71bcc8;
     grid-template-columns: 2fr 3fr 3fr; 
     height: 30vh;
     width: 90vh;
-    background-color: #233a70;
     padding: 10px;
     margin: 20px;
-    cursor: pointer;
 }
 
 .H11{
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -502,7 +504,6 @@ select {
 
 
 #Precio{
-    border: 1px solid black;
     display: grid;
     grid-template-rows: 1fr 1fr 2fr 1fr; 
     align-items: center;
@@ -510,45 +511,68 @@ select {
     width: calc(90%);
     justify-content: center;
     border-radius: 20px;
-    background-color: #7cd8e8;
-    
+    color: white;
+    background-color: #4489be;
+    cursor: pointer;
+}
+
+#Precio:hover{
+    background-color: #da385b;
+    transition: 0.2s;
+
+    .descuento{
+        background-color: #4489be;
+        ;
+    }
 }
 
 #NomHotel{
     font-style: italic;
     font-weight: bold;
     color: #2d4b2c;
-    font-size: 20px;
+    font-size: 30px;
     height: 10px;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 .estrellas {
     color: #2d4b2c;
-    font-size: 18px;
+    font-size: 28px;
     height: 10px;
     display: flex;
     justify-content: center; 
     align-items: center; 
-    padding: 10px 10px;
+    margin: 20px;
 }
 
 .servicios {
     list-style-type: disc;
     padding-left: 20px;
-    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     height: 10px;
-    
+    font-size: 20px;
+}
+
+.servicios:hover{
+    color: #318ef2;
+    cursor: pointer;
 }
 
 .iconos {
     display: flex;
-    margin-top: 15px;
-    font-size: 24px;
+    margin-bottom: 15px;
+    font-size: 50px;
     color: #2d4b2c;
     height: 10px;
     justify-content: center; 
     align-items: center; 
+}
+
+#ComentaAqui:hover{
+    color: #007BFF;
+    cursor: pointer;
 }
 
 .iconos i {
@@ -556,36 +580,21 @@ select {
 }
 
 .H12{
-    border: 1px solid black;
     display: grid;
     grid-template-rows: 1fr 1fr 2fr 1fr; 
     
-    background-color: #e8b87c;
+    background-color: #f3ede2;
 
 }
 
-#precio {
-    font-size: 28px;
+.precio {
+    font-size: 48px;
     font-weight: bold;
     text-align: right;
     
 }
 
-#precio:hover {
-    background-color: #2980b9;
-}
 
-.bt{
-    background-color: white;
-    width: 70px;
-    cursor: pointer;
-    margin: 10px;
-    display: inline;
-}
-
-.bt:hover{
-    background-color: #28a745;
-}
 
 .Menu{
     display: none;
@@ -805,110 +814,145 @@ select {
 #Precios{
     display: grid;
     grid-template-columns: 3fr 3fr; 
-    height: 100%;
-    width: 100%;
+    border-radius: 20px;
+    margin: 50px 10px 10px 10px;
+    height: 30vh;
 }
+
 
 #MenuH13{
-    height: 100vh;
+    height: 90vh;
+    display: none;
 }
 
-#CobroInfo{
-    background-color: #3d657e;
-}
+#DatosC{
 
-#Cobro{
-    width: 100%;
+    width: 90%;
     margin: auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #7886e1;
-    border-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-style: italic;
     color: #ffffff;
     font-size: 20px;
+
+    h2 {
+        text-align: center;
+        color: #333;
+        
+    }
+
+    label {
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    input, select {
+        width: 90%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    #EstYCP{
+        display: grid;
+        grid-template-columns: 3fr 3fr; 
+        margin: 10px;
+
+        input, select {
+            width: 60%;
+            padding: 10px;
+            margin: 10px;
     
+        }
+    }
 
 }
 
-/* Estilo específico para los campos dentro del formulario */
-#Cobro input[type="text"],
-#Cobro input[type="email"],
-#Cobro input[type="tel"],
-#Cobro input[type="date"],
-#Cobro input[type="number"],
-#Cobro select,
-#Cobro textarea {
-    width: calc(60%);
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin: 10px 10px;
+
+
+#Pago{
+    display: grid;
+    grid-template-rows: 3fr 3fr; 
+    background-color: #595fc9;
 }
 
-#Cobro input[type="checkbox"] {
-    margin-right: 10px;
+#ImagenH{
+    background-image: url(https://content.r9cdn.net/rimg/himg/80/dd/b8/ostrovok-645649-696520-859823.jpg);
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    border-top-right-radius: 20px;
+
+    h2{
+        text-align: center;
+        color: #333;
+    }
 }
 
-.hotel-button {
-    width: calc(50%);
-    padding: 10px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+#Efectivo{
+
+    width: 90%;
+    padding: 20px;
+    background-color: #3f4ca2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: #ffffff;
+    font-size: 20px;
+    border-bottom-right-radius: 20px ;
+
+    label {
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    input, select {
+        width: 90%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .boton{
+        background-color: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 12px 24px; 
+            font-size: 26px; 
+            font-weight: bold;
+            border-radius: 25px; 
+            cursor: pointer; 
+            transition: background 0.3s ease; 
+    }
+
+    .boton:hover {
+        background-color: #0056b3; /* Cambio de color al pasar el cursor */
+    }
 }
 
-.hotel-button:hover {
-    background-color: #45a049;
+#Btn {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 25px;
 }
 
 /* Aqui acaba el desmadre de cobrooooooooooooooooo */
 
-#CostoT{
-    background-color: #35579f;
-    height: 5vh;
-    font-style: italic;
-    color: #ffffff;
-    font-size: 30px;
-    text-align: right;
-    padding-top: 5vh;
-}
 
-#CobroInfo{
-    display: grid;
-    grid-template-rows: 2fr 4fr 2fr 10fr; 
-    background-color: rgb(95, 170, 220);
-}
-
-
-
-#ImagenH{
-    background-image: url(https://images.trvl-media.com/lodging/2000000/1490000/1486400/1486338/2cb5c35a.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium);
-    background-size: cover;  
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-
-#total{
-    background-color: #35579f;
-    font-style: italic;
-    color: #ffffff;
-    font-size: 30px;
-    text-align: right;
-    padding-top: 5vh;
-
-}
 
 /* Fila 2: Precio mensual */
 .mensualidad {
     font-size: 16px;
     font-style: italic;
     text-align: right;
-    color: #2d4b2c;
+    color: #ffffff;
     height: 10px;
 
 }
@@ -940,11 +984,10 @@ select {
 }
 
 .H13{
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e8b87c;
+    background-color: #f3ede2;
     border-top-right-radius:20px;
     border-bottom-right-radius:20px;
 }
