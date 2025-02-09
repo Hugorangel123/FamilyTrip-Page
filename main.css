@@ -46,8 +46,18 @@ body {
 
 
 #G1 {
-    grid-area: Enca;
-    background-color: #1E3A5F; /* Azul Marino */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: relative;
+    width: 97vw;;
+    z-index: 1000; * Azul Marino */
+    
 }
 #G2 {
     grid-area: Nave;
@@ -56,10 +66,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  
 }
 #G3 {
     grid-area: Enca2;
-    background-color: #3A506B; /* Azul Grisáceo */
+    background-color: #15616D; /* Azul Grisáceo */
 }
 #G4 {
     grid-area: Mapa;
@@ -67,7 +78,7 @@ body {
 }
 #G5 {
     grid-area: Resul;
-    background-color: #2E5984; /* Azul Acero */
+    background-color: #F4F4F4; /* Azul Acero */
 }
 #G6 {
     grid-area: Nose;
@@ -85,6 +96,7 @@ body {
     height: 55px;
     width: 100%; 
     max-width: 1200px; 
+    margin-bottom: 10VH;
 }
 
 
@@ -284,33 +296,160 @@ form {
 
 
 #Logo{
-    width: 30%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
     display: block;
     margin: auto;
     
 }
-
+/*cambios de ahorita*/
 .Filtros {
     display: flex;
     gap: 10px;
-    background-color: #4a7023;
+    
+    
     padding: 10px;
     border-radius: 10px;
     color: white;
-    width: 90%;
+    width: 100%;
     margin-top: 10px;
+
+    text-align: center;
+    justify-content: center;
 }
+
+#PreciosFiltros{
+    font-family: "Host Grotesk", serif;
+    color: whitesmoke;
+
+}
+
+#ServiciosFiltros{
+    font-family: "Host Grotesk", serif;
+    color: whitesmoke;
+}
+#PuntuacionFiltros{
+    font-family: "Host Grotesk", serif;
+    color: whitesmoke;
+}
+
+#PreciosFiltrosOP{
+    color:  #1E3A5F;
+    
+}
+
+select {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Host Grotesk", serif;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    appearance: none; /* Ocultar la flecha del navegador por defecto */
+    outline: none;
+  }
+  
+  select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  option {
+    background-color: #fff;
+    color: #333;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Personalización de la flecha del desplegable */
+  select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+
+  #Empresa{
+    font-family: "Host Grotesk", serif;
+    font-size: 1.25rem;
+    color: black;
+    margin: 0;
+    padding: 0;
+  
+    line-height: 1.5;
+  }
+  
+
+
+  #G1 {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos */
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+#LOGOFAMILIA {
+    width: auto; /* Evita que el logo se deforme */
+    height: 10VH; /* Ajusta la altura del logo */
+    display: block;
+}
+
+.navbar-middle {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-middle a {
+    font-family: "Host Grotesk", serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 2VH;
+}
+
+.navbar-right {
+    font-family: "Host Grotesk", serif;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 2VH;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-middle a:hover, 
+.navbar-right a:hover {
+    color: #007BFF;
+}
+
+
+/* Filtros */
 .Hoteles {
     display: flex;
     width: 90%;
     margin-top: 20px;
 }
-.Mapa {
-    width: 50%;
-    height: 400px;
-    background-color: #ccc;
-}
+
 .resultados {
     width: 50%;
     padding: 10px;
@@ -330,10 +469,6 @@ form {
     height: 50%;
 }
 
-#map {
-    height: 500px; 
-    width: calc(100%);
-}
 
 /*Esto de aca eh mio*/
 
@@ -749,10 +884,7 @@ form {
     background-color: rgb(95, 170, 220);
 }
 
-#Pagos{
-    
 
-}
 
 #ImagenH{
     background-image: url(https://images.trvl-media.com/lodging/2000000/1490000/1486400/1486338/2cb5c35a.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium);
@@ -770,16 +902,6 @@ form {
     padding-top: 5vh;
 
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Fila 2: Precio mensual */
 .mensualidad {
@@ -851,7 +973,7 @@ form {
     top: 60vh;
   left: 0px;
   width: 50vw;
-  height: 61vh;
+  height: 120vh;
   position: absolute;
  
    
