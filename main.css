@@ -10,7 +10,7 @@ body {
     width: 100vw;
     height: 100vh;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 40% 10% 60% 60%;
+    grid-template-rows: 10% 40% 10% 60% 140%;
     background-color: rgb(23, 32, 32);
     grid-template-areas: "Enca Enca"
                          "Nave Nave"
@@ -529,7 +529,6 @@ select {
 #NomHotel{
     font-style: italic;
     font-weight: bold;
-    color: #2d4b2c;
     font-size: 30px;
     height: 10px;
     padding: 10px;
@@ -537,7 +536,6 @@ select {
 }
 
 .estrellas {
-    color: #2d4b2c;
     font-size: 28px;
     height: 10px;
     display: flex;
@@ -556,7 +554,7 @@ select {
 }
 
 .servicios:hover{
-    color: #318ef2;
+    color: #da385b;
     cursor: pointer;
 }
 
@@ -564,14 +562,13 @@ select {
     display: flex;
     margin-bottom: 15px;
     font-size: 50px;
-    color: #2d4b2c;
     height: 10px;
     justify-content: center; 
     align-items: center; 
 }
 
 #ComentaAqui:hover{
-    color: #007BFF;
+    color: #da385b;
     cursor: pointer;
 }
 
@@ -582,7 +579,7 @@ select {
 .H12{
     display: grid;
     grid-template-rows: 1fr 1fr 2fr 1fr; 
-    
+    color: #124a87;
     background-color: #f3ede2;
 
 }
@@ -597,16 +594,14 @@ select {
 
 
 .Menu{
-    display: none;
     position: relative;
     grid-template-rows: 2fr 3fr 3fr; 
     height: 45vh;
     width: 92vh;
-    background-color: #456bc2;
+    background-color: #317984;
     
     margin: -20px 20px 10px 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px;
 }
 
 .CerrarMenu {      /* Ajusta la distancia desde la derecha */
@@ -622,21 +617,24 @@ select {
     right: 0px;         
 }
 
+#MenuH11{
+    display: none;
+}
+
 #SServicios{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr; 
     height: 35vh;
     width: 85vh;
-    background-color: #35579f;
+    background-color: #138c9f;
     margin: 10px 20px 20px 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px;
 }
 
 .S1{
-    background-color: #98bfe0;
+    background-color: #9edee8;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: grid;
     grid-template-rows: 2fr 2fr;
 }
@@ -645,6 +643,11 @@ select {
     margin: 0px;
     transition: 0.5s;
     font-size: 20px;
+    background-color: #EE4266;
+    
+    #TGimnasio{
+        color:  #e2cbd0;
+    }
 }
 
 #TituloS{
@@ -662,6 +665,9 @@ select {
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
 }
 
 #TGimnasio{
@@ -676,6 +682,8 @@ select {
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 #FAreaInfantil{
@@ -683,6 +691,8 @@ select {
     background-size: cover;  
     background-position: center; 
     background-repeat: no-repeat; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 /* Opiniones */
@@ -691,7 +701,7 @@ select {
     grid-template-rows: 1fr 7fr; 
     height: 55vh;
     width: 85vh;
-    background-color: #35579f;
+    background-color: #579faa;
     margin: 10px 20px 20px 20px;
     border-radius: 20px;
 }
@@ -701,7 +711,7 @@ select {
     grid-template-columns: 14fr 2fr; 
     height: 5vh;
     width: 80vh;
-    background-color: #8da6de;
+    background-color: #138c9f;
     margin: 10px 20px 20px 20px;
     border-radius: 20px;
 }
@@ -738,14 +748,14 @@ select {
 }
 
 .Comentarios{
-    background-color: rgb(61, 66, 201);
+    background-color: #2a7b88;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
 #MenuH12{
     height: 70vh;
-    background-color: #288ac7;
+    background-color: #1d646f;
     display: none;
     grid-template-rows: 2fr 15fr; 
 }
@@ -754,7 +764,7 @@ select {
     display: grid;
     height: 20vh;
     grid-template-columns: 4fr 14fr; 
-    background-color: rgb(95, 170, 220);
+    background-color: #94d5df;
     border-radius: 20px;
     margin: 10px;
 }
@@ -780,7 +790,7 @@ select {
     width: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: #1379de;
+    background-color: #399fae;
 }
 
 #NomCliente{
@@ -830,7 +840,7 @@ select {
     width: 90%;
     margin: auto;
     padding: 30px;
-    background-color: #7886e1;
+    background-color: #399fae;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -898,7 +908,7 @@ select {
 
     width: 90%;
     padding: 20px;
-    background-color: #3f4ca2;
+    background-color: #124f58;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-style: italic;
     color: #ffffff;
@@ -920,7 +930,7 @@ select {
     }
 
     .boton{
-        background-color: #007bff; 
+        background-color: #399fae; 
             color: white; 
             border: none; 
             padding: 12px 24px; 
@@ -932,7 +942,7 @@ select {
     }
 
     .boton:hover {
-        background-color: #0056b3; /* Cambio de color al pasar el cursor */
+        background-color: #1d3336; /* Cambio de color al pasar el cursor */
     }
 }
 
