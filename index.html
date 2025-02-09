@@ -236,6 +236,9 @@
         </div>
         <div id="G5">
             <div class="resultados">
+                <div class="bt" id="b1">Servicios</div>
+                <div class="bt" id="b2">Opiniones</div>
+                <div class="bt" id="b3">Precios</div>
                 <div class="HotelInfo" id="H1">
                     <div class="H11" data-lat="20.5649" data-lon="-87.1201" data-name="HOTAL 1"></div>
                     <div class="H12">
@@ -288,6 +291,202 @@
                         </div>
                     </div>
                 </div>
+                <div class="Menu" id="MenuH11">
+                    <div id="TituloS">Servicios</div>
+                    <button class="CerrarMenu" onclick="cerrarMenu('MenuH11')">
+                        ✖
+                    </button>
+                    <div id="SServicios">
+                        <div class="S1" id="S11">
+                            <div id="FGimnasio"></div>
+                            <div id="TGimnasio">
+                                <p><b>Gimnasio</b></p>
+                                <p>Disponible las 24 horas, duchas incluidas</p>
+                            </div>
+                        </div>
+                        <div class="S1" id="S11">
+                            <div id="FPisicina"></div>
+                            <div id="TGimnasio">
+                                <p><b>Piscina</b></p>
+                                <p>Disponible entre 8:00 a.m. - 11:00 p.m.</p>
+                            </div>
+                        </div>
+                        <div class="S1" id="S11"><div id="FAreaInfantil"></div>
+                        <div id="TGimnasio">
+                            <p><b>Area Infantil</b></p>
+                            <p>Perfecta para el entretenimiento de sus hijos</p>
+                        </div></div>
+                    </div>
+                    
+                </div>
+                <div class="Menu" id="MenuH12">
+                    <div id="TituloS">Opiniones</div>
+                    <button class="CerrarMenu" onclick="cerrarMenu('MenuH12')">
+                        ✖
+                    </button>
+                    <div id="Opiniones">
+                        <div id="Barrita">
+                            <div id="txtOpiniones">
+                                <input type="text" id="textbox1" name="nombre" placeholder="Escribe tu nombre"><br><br>
+
+                            </div>
+                            <div id="BuscarC">
+                                <button id="BOpinion">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="Comentarios">
+                            <div id="C1">
+                                <div id="Foto">
+
+                                </div>
+                                <div id="O1">
+                                    <div id="NomCliente">
+                                        Usuario: <b>C Melman</b>
+                                    </div>
+                                    <div class="estrellasC">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="OT">
+                                        Ash ya viene ñoño
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="C1">
+                                <div id="Foto">
+
+                                </div>
+                                <div id="O1">
+                                    <div id="NomCliente">
+                                        Usuario: <b>C Melman</b>
+                                    </div>
+                                    <div class="estrellasC">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div id="OT">
+                                        Ash ya viene nono
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="Menu" id="MenuH13">
+                    <button class="CerrarMenu" onclick="cerrarMenu('MenuH13')">
+                        ✖
+                    </button>
+                    <div id="Precios">
+                        <div id="Cobro">
+                            <h2>Reserva de Habitación</h2>
+
+                            <!-- Nombre y Apellidos -->
+                            <div class="form-group">
+                                <label for="hotel-nombre">Nombre completo:</label>
+                                <input type="text" id="hotel-nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                            </div>
+
+                            <!-- Correo electrónico -->
+                            <div class="form-group">
+                                <label for="hotel-correo">Correo electrónico:</label>
+                                <input type="email" id="hotel-correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+                            </div>
+
+                            <!-- Número de teléfono -->
+                            <div class="form-group">
+                                <label for="hotel-telefono">Número de teléfono:</label>
+                                <input type="tel" id="hotel-telefono" name="telefono" placeholder="Ingresa tu número de teléfono" required>
+                            </div>
+
+                            <!-- Número de personas -->
+                            <div class="form-group">
+                                <label for="hotel-personas">Número de personas:</label>
+                                <select id="hotel-personas" name="personas" required>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 personas</option>
+                                    <option value="3">3 personas</option>
+                                    <option value="4">4 personas</option>
+                                    <option value="5">5 personas</option>
+                                </select>
+                            </div>
+
+                            <!-- Tipo de habitación -->
+                            <div class="form-group">
+                                <label for="hotel-habitacion">Tipo de habitación:</label>
+                                <select id="hotel-habitacion" name="habitacion" required>
+                                    <option value="individual">Individual</option>
+                                    <option value="doble">Doble</option>
+                                    <option value="suite">Suite</option>
+                                    <option value="familiar">Familiar</option>
+                                </select>
+                            </div>
+
+                            <!-- Precios -->
+                            <div class="form-group">
+                                <label for="hotel-precio">Precio por noche:</label>
+                                <input type="number" id="hotel-precio" name="precio" placeholder="Ingresa el precio por noche" required>
+                            </div>
+
+                            <!-- Preferencias adicionales -->
+                            <div class="form-group">
+                                <label for="hotel-preferencias">Preferencias adicionales:</label>
+                                <textarea id="hotel-preferencias" name="preferencias" placeholder="¿Algún requerimiento especial?" rows="4"></textarea>
+                            </div>
+
+                            <!-- Método de pago -->
+                            <div class="form-group">
+                                <label for="hotel-pago">Método de pago:</label>
+                                <select id="hotel-pago" name="pago" required>
+                                    <option value="tarjeta">Tarjeta de crédito/débito</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="efectivo">Efectivo</option>
+                                </select>
+                            </div>
+
+                            <!-- Aceptación de términos -->
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="hotel-terminos" name="terminos" required>
+                                    Acepto los términos y condiciones.
+                                </label>
+                            </div>
+
+                            <!-- Botón de envío -->
+                            <div class="form-group">
+                                <button type="submit" id="hotel-submit" class="hotel-button">Confirmar Reserva</button>
+                            </div>
+                        </div>
+
+                        <div id="CobroInfo">
+                            <div id="CostoT">
+                                $2000
+                            </div>
+                            <div id="Pagos">
+                                <p>Cuarto ........... %2000</p>
+                                <p>IVA ........... $200</p>
+                                <p>Tarifa del resort ........... $6000</p>
+                            </div>
+                            <div id="total">
+                                Total $5000
+                            </div>
+                            <div id="ImagenH">
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
                 <div class="HotelInfo" id="H1">
                     <div class="H11"></div>
                     <div class="H12"></div>
@@ -304,6 +503,38 @@
 
         </div>
 
+        <script>
+            function mostrarMenu(menuId) {
+        // Ocultar todos los menús antes de mostrar el seleccionado
+        document.getElementById("MenuH11").style.display = "none";
+        document.getElementById("MenuH12").style.display = "none";
+        document.getElementById("MenuH13").style.display = "none";
+
+        // Mostrar solo el menú correspondiente
+        document.getElementById(menuId).style.display = "grid";
+        }
+
+        function cerrarMenu(menuId) {
+            document.getElementById(menuId).style.display = "none";
+            document.querySelectorAll(".HotelInfo").style.borderBottomLeftRadius = "0"; 
+        document.querySelectorAll(".HotelInfo").style.borderBottomRightRadius = "0"; 
+        }
+
+        document.getElementById("b1").addEventListener("click", function() {
+            mostrarMenu("MenuH11");
+        });
+        document.getElementById("b2").addEventListener("click", function() {
+            mostrarMenu("MenuH12");
+        });
+        document.getElementById("b3").addEventListener("click", function() {
+            mostrarMenu("MenuH13");
+        });
+
+        
+
+
+        
+        </script>
         
 
 

@@ -322,6 +322,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: 2s;
+    
 }
 
 .HotelInfo:hover{
@@ -340,9 +341,11 @@ form {
     display: grid;
     grid-template-columns: 2fr 3fr 3fr; 
     height: 30vh;
-    width: 98vh;
+    width: 90vh;
     background-color: #233a70;
     padding: 10px;
+    margin: 20px;
+    cursor: pointer;
 }
 
 .H11{
@@ -355,10 +358,10 @@ form {
     background-position: center; 
     background-repeat: no-repeat; 
 
-
     border-top-left-radius:20px;
-    border-bottom-left-radius:20px
+    border-bottom-left-radius:20px;
 }
+
 
 
 
@@ -426,12 +429,357 @@ form {
 
 }
 
-.precio {
+#precio {
     font-size: 28px;
     font-weight: bold;
     text-align: right;
     
 }
+
+#precio:hover {
+    background-color: #2980b9;
+}
+
+.bt{
+    background-color: white;
+    width: 70px;
+    cursor: pointer;
+    margin: 10px;
+    display: inline;
+}
+
+.bt:hover{
+    background-color: #28a745;
+}
+
+.Menu{
+    display: none;
+    position: relative;
+    grid-template-rows: 2fr 3fr 3fr; 
+    height: 45vh;
+    width: 92vh;
+    background-color: #456bc2;
+    
+    margin: -20px 20px 10px 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.CerrarMenu {      /* Ajusta la distancia desde la derecha */
+    background: rgb(43, 103, 128);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;  /* Posiciona el botón dentro del contenedor */
+    top: 0px;           /* Ajusta la distancia desde arriba */
+    right: 0px;         
+}
+
+#SServicios{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr; 
+    height: 35vh;
+    width: 85vh;
+    background-color: #35579f;
+    margin: 10px 20px 20px 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.S1{
+    background-color: #98bfe0;
+    margin: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+}
+
+#S11:hover{
+    margin: 0px;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+#TituloS{
+    text-align: center;
+    padding: 0px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 10px 10px 0px 10px;
+    color: rgb(255, 255, 255);
+}
+
+#FGimnasio{
+    background-image: url(https://hotelesdesconecta2.com/wp-content/uploads/2023/08/hotel-con-gimnasio-1024x538.jpg);
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#TGimnasio{
+    text-align: center;
+    padding: 0px;
+    font-style: italic;
+    color: rgb(11, 7, 87);
+}
+
+#FPisicina{
+    background-image: url(https://images.trvl-media.com/lodging/2000000/1620000/1619300/1619210/04574ba1.jpg?impolicy=fcrop&w=357&h=201&p=1&q=medium);
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#FAreaInfantil{
+    background-image: url(https://children-friendly.com/blog_assets/uploads/02-2016/1920/parque-de-bolas-hotel-andorra_N4Wm1.jpg);
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* Opiniones */
+#Opiniones{
+    display: grid;
+    grid-template-rows: 1fr 7fr; 
+    height: 55vh;
+    width: 85vh;
+    background-color: #35579f;
+    margin: 10px 20px 20px 20px;
+    border-radius: 20px;
+}
+
+#Barrita{
+    display: grid;
+    grid-template-columns: 14fr 2fr; 
+    height: 5vh;
+    width: 80vh;
+    background-color: #8da6de;
+    margin: 10px 20px 20px 20px;
+    border-radius: 20px;
+}
+
+#txtOpiniones{
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#textbox1{
+    width: 100%;
+        height: 100%; 
+        border: none;
+        background-color: transparent; 
+        outline: none; 
+        font-size: 16px; 
+        color: #333;
+        font-family: Arial, sans-serif; 
+        padding: 0 10px; 
+}
+
+#BOpinion{
+    width: 100%; /* El botón ocupa todo el contenedor */
+        height: 100%; /* El botón ocupa toda la altura */
+        border: none; /* Elimina el borde del botón */
+        background-color: transparent; /* Fondo transparente para el botón */
+        color: white; /* Color del texto del botón */
+        font-size: 16px; /* Tamaño del texto */
+        font-family: Arial, sans-serif; /* Fuente del texto */
+        cursor: pointer; /* Muestra el cursor de "mano" */
+        outline: none; /* Elimina el borde de enfoque del botón */
+
+}
+
+.Comentarios{
+    background-color: rgb(61, 66, 201);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#MenuH12{
+    height: 70vh;
+    background-color: #288ac7;
+    display: none;
+    grid-template-rows: 2fr 15fr; 
+}
+
+#C1{
+    display: grid;
+    height: 20vh;
+    grid-template-columns: 4fr 14fr; 
+    background-color: rgb(95, 170, 220);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#Foto{
+    
+    
+    border-radius: 90px;
+    margin: 10px;
+}
+
+#C1 #Foto{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJ8nx8-2Zg_NakD54Ty1BevSzF9Pq3Xxe7w&s);
+    
+}
+
+
+
+#O1{
+    display: grid;
+    grid-template-rows: 2fr 3fr 4fr; 
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #1379de;
+}
+
+#NomCliente{
+    font-style: italic;
+    color: #ffffff;
+    font-size: 30px;
+    height: 10px;
+    margin: 10px;
+}
+
+.estrellasC{
+    color: #0b2659;
+    font-size: 30px;
+    height: 10px;
+    padding: 10px;
+}
+
+#OT{
+    font-style: italic;
+    color: #1f0ea4;
+    font-size: 20px;
+    height: 5vh;
+    padding: 5px;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Cobroooooooooo, esta hecho con gpt asi que es un desmadre de IDs, pero jala */
+
+#Precios{
+    display: grid;
+    grid-template-columns: 3fr 3fr; 
+    height: 100%;
+    width: 100%;
+}
+
+#MenuH13{
+    height: 100vh;
+}
+
+#CobroInfo{
+    background-color: #3d657e;
+}
+
+#Cobro{
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: #7886e1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: #ffffff;
+    font-size: 20px;
+    
+
+}
+
+/* Estilo específico para los campos dentro del formulario */
+#Cobro input[type="text"],
+#Cobro input[type="email"],
+#Cobro input[type="tel"],
+#Cobro input[type="date"],
+#Cobro input[type="number"],
+#Cobro select,
+#Cobro textarea {
+    width: calc(60%);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 10px;
+}
+
+#Cobro input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.hotel-button {
+    width: calc(50%);
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hotel-button:hover {
+    background-color: #45a049;
+}
+
+/* Aqui acaba el desmadre de cobrooooooooooooooooo */
+
+#CostoT{
+    background-color: #35579f;
+    height: 5vh;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: right;
+    padding-top: 5vh;
+}
+
+#CobroInfo{
+    display: grid;
+    grid-template-rows: 2fr 4fr 2fr 10fr; 
+    background-color: rgb(95, 170, 220);
+}
+
+#Pagos{
+    
+
+}
+
+#ImagenH{
+    background-image: url(https://images.trvl-media.com/lodging/2000000/1490000/1486400/1486338/2cb5c35a.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium);
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#total{
+    background-color: #35579f;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: right;
+    padding-top: 5vh;
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Fila 2: Precio mensual */
 .mensualidad {
@@ -489,7 +837,7 @@ form {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
     cursor: pointer;
     font-size: 16px;
-    ;
+    
 
     
     margin-left: 5vw;
