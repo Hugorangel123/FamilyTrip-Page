@@ -768,6 +768,16 @@ select {
     border-radius: 20px;
     margin: 10px;
 }
+#C2{
+    display: grid;
+    height: 20vh;
+    grid-template-columns: 4fr 14fr; 
+    background-color: rgb(95, 170, 220);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
 
 #Foto{
     
@@ -777,10 +787,18 @@ select {
 }
 
 #C1 #Foto{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJ8nx8-2Zg_NakD54Ty1BevSzF9Pq3Xxe7w&s);
-    
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-_JdMrxaCVxLdl4bJ1ws0IzriQ6RWqurGCA&s) ;
+    background-position: center;
+    background-size: cover;
+
 }
 
+#C2 #Foto{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdtDT9svyd1Xtl_ICGyubcTXSmvAc4D3d03Q&s) ;
+    background-position: center;
+    background-size: cover;
+    
+}
 
 
 #O1{
